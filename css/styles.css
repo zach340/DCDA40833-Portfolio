@@ -10,9 +10,9 @@
     --primary-color: #4d1979;      /* TCU Purple */
     --secondary-color: #874af1;    /* Light Purple */
     --accent-color: #ff2200;       /* Red accent I liked the blood frog look that the red accents give the website for now */
-    --text-color: #000000;            /* Black for text i fel like black is the easiest to read on a light background*/
-    --text-secondary: #7a8088;     /* Gray for captions */
-    --bg-color: #f4f4f4;           /* Light background */
+    --text-color: #000000;            /* White for text  on the black back grounf*/
+    --text-secondary: #9ba3ae;     /* Gray for captions */
+    --bg-color: #000000;           /* Dark background because it is apperantly better for your eyes background */
     --white: #ffffff;
 }
 
