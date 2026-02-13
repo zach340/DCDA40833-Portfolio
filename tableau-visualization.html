@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Evaluation | Zach Campbell</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lab02.html" class="active">Lab 2: AI Evaluation</a>
+            <a href="lab03.html" class="active">Lab 3: Visualization Critique</a>
+            <a href="tableau-visualization.html" class="active">Lab 4: Tableau Visualization</a>
+        </nav>
+        <h1>AI Tool Evaluation</h1>
+    </header>
+<main>
+        <section>
+            <h2>Visualizations</h2>
+<div class='tableauPlaceholder' id='viz1770954106446' style='position: relative'><noscript><a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;la&#47;lab4_17709414605680&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='lab4_17709414605680&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;la&#47;lab4_17709414605680&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1770954106446');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='102%';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </section>
+
+        <section>
+            <h2>Critique</h2>
+            <p>When uploading my data the first error I noticed was that some of my counts (balls and Strikes) were being treated as dates. I suspected that it was how excel was storing the CSV file and it was treating certain situations as dates. The way I fixed this was I ran the original csv through a python program that turns dates into the desired count. With this I also combined this with a different model I had created to calculate stuff+ which looks only at the physical characteristics of a pitch. It is centered at 100 and each pitched is based on the most used fastball. Then I imported the new csv into tableau and used this to visualize my data. 
+            <p>The visualizations I chose were like a heatmap such that it shows how each pitch looks when used in certain counts and shows this for all pitchers that I had downloaded. This can tell a player or coach at a quick glance how effective a pitcher is with a pitch in different situations. The next visualization uses a pie chart and shows how often a pitcher uses a pitch in a count. The color indicates what pitch is used. There are certain pitchers who did not throw much so they may only have used one or two pitches in a count or only faced one or two hitters so their data may not be as good for others because of the lack of any coherent pattern. The final visualization shows how hard the pitcher throws each pitch which can tell the hitters what to expect when they step into the hitters box.</p>
+            <p>One of the expected patterns is that most of the players start the at-bat with a fastball or sinker (which is just a different type of fastball with a little bit more movement.) but mix in other pitches to try and catch people off guard. From a young age many players are taught to through a fastball first to get a head in the count and set up their other pitches. An outlier is Breedlove who though 29 breaking balls (curveballs and sliders) first pitch compared to just 16 fastballs. This is not normal for many of the pitchers or how they approach the game.</p>
+            <p>Another outlier is Ashfields 0-0 sinker. The rest of his pitches are either just above or below average, but his 0-0 sinker is among the highest stuff+ that we see which is out of the ordinary. We typically see that most of their pitches are around the same metric with some slight variations with pitch specialties, but Ashfields sliders are in the 80s and his sinker is 116 so weeing this almost 30-point difference is supper interesting. This would lead to more usage in games with a good mix in with his change up just to make sure that there is still another pitch for him to work in, but I would expect to see the slider either improve or for its usage to fall off because it is not effective when compared to his fastball or sinker. I do not know what could cause such a disparity but if we were to look at the movement speed this could give us more insight as to what makes his sinker so effective. Is there a way to replicate this efficiency using his numbers and how can we make his other pitches this effective overall? Is it a good thing that there is such a big gap between his pitches or would he be better off just having average stuff but having more pitches around that mark? This may also just be caused by limited sample size but for we do know is when thrown his sinker was much more effective than his other pitches.</p>
+            <p>Tableau is a good tool for visualizations if you have a general idea for what you want to show and do not necessarily need specifics and are okay with more generalized outcomes. If you do ot know how to get the specifics it can be frustrating if you want to get a more individualistic view. It is good when you want multiple visualizations together and can easily generalize data and come up with good visualization with different looks. Things like excel or google sheets are a little easier when looking for specifics because they show all the features in every field vs tableau which just shows the field titles and then some of the metrics without any input but for stuff like this pie chart we needed to create a new field that counts each pitch in a count and groups the same pitches in order to get a count of how many times it was thrown. If I did not look up how to do this calculation there would have been no way for me to find this data where as excel it easier to find this kind of numerical feature.</p>
+        </section>
+    </main>
+</body>
+</html>
