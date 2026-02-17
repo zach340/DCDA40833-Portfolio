@@ -71,6 +71,39 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Hamburger button - hidden on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 2px;
+    margin: 4px 0;
+}
+
+/* Hamburger animation when open - only active on mobile */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Style the navigation list */
 nav ul {
     list-style: none;           /* Remove bullets */
@@ -382,18 +415,49 @@ footer a:hover {
 
     nav {
         font-size: 0.9rem;
+        justify-content: space-between; /* Make room for hamburger */
+        padding: 0.75rem 1rem;
     }
 
-    /* Stack navigation vertically on mobile */
+    /* Show hamburger button ONLY on mobile */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hide navigation by default on mobile */
     nav ul {
-        flex-direction: column;  /* Change from row to column */
-        align-items: center;     /* Center the stacked items */
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #3d1461;
+        width: 70%;
+        height: 100vh;
+        padding: 4rem 0 2rem 0;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+        align-items: flex-start;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    /* Show navigation when active */
+    nav ul.active {
+        left: 0;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     nav a {
         display: block;          /* Full width for easier tapping */
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding: 1rem 1.5rem;
+        border-radius: 0;
     }
 
     main section {

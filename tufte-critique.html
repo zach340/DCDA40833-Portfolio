@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="ai-evaluation.html">AI Evaluation</a></li>
             <li><a href="tufte-critique.html">Tufte Critique</a></li>
             <li><a href="tableau-visualization.html">Tableau Viz</a></li>
-            <!-- Add more lab links as the semester progresses -->
-        </nav>
+            <li><a href="lab5.html">Lab 5</a></li>
+            <li><a href="hometown-map.html">Hometown Map</a></li>
+        </ul>
+    </nav>
+
+    <header>
         <h1>Visualization Critique</h1>
     </header>
 
@@ -50,5 +59,29 @@
     <footer>
         <p>© 2026 Zach Campbell</p>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

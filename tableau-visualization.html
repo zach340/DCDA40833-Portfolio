@@ -8,14 +8,23 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="ai-evaluation.html">AI Evaluation</a></li>
             <li><a href="tufte-critique.html">Tufte Critique</a></li>
             <li><a href="tableau-visualization.html">Tableau Viz</a></li>
-            <!-- Add more lab links as the semester progresses -->
-        </nav>
+            <li><a href="lab5.html">Lab 5</a></li>
+            <li><a href="hometown-map.html">Hometown Map</a></li>
+        </ul>
+    </nav>
+
+    <header>
         <h1>Tableau Visualization</h1>
     </header>
 <main>
@@ -33,5 +42,33 @@
             <p>Tableau is a good tool for visualizations if you have a general idea for what you want to show and do not necessarily need specifics and are okay with more generalized outcomes. If you do ot know how to get the specifics it can be frustrating if you want to get a more individualistic view. It is good when you want multiple visualizations together and can easily generalize data and come up with good visualization with different looks. Things like excel or google sheets are a little easier when looking for specifics because they show all the features in every field vs tableau which just shows the field titles and then some of the metrics without any input but for stuff like this pie chart we needed to create a new field that counts each pitch in a count and groups the same pitches in order to get a count of how many times it was thrown. If I did not look up how to do this calculation there would have been no way for me to find this data where as excel it easier to find this kind of numerical feature.</p>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Zach Campbell</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
