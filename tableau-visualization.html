@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+<!-- Page metadata and styles -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navigation menu -->
     <nav>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span>
@@ -24,15 +26,20 @@
         </ul>
     </nav>
 
+    <!-- Page header -->
     <header>
         <h1>Tableau Visualization</h1>
     </header>
+    
+<!-- Main content -->
 <main>
+        <!-- Embedded Tableau visualization -->
         <section>
             <h2>Visualizations</h2>
 <div class='tableauPlaceholder' id='viz1770954106446' style='position: relative'><noscript><a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;la&#47;lab4_17709414605680&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='lab4_17709414605680&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;la&#47;lab4_17709414605680&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1770954106446');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='102%';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </section>
 
+        <!-- Analysis and critique of the visualization -->
         <section>
             <h2>Critique</h2>
             <p>The data set i used it from Trumedia which requires special access. This is cumlative across all games from teams that have an agreement with Trumedia to upload their trackman data, which collects every pitch metritcs. When uploading my data the first error I noticed was that some of my counts (balls and Strikes) were being treated as dates. I suspected that it was how excel was storing the CSV file and it was treating certain situations as dates. The way I fixed this was I ran the original csv through a python program that turns dates into the desired count. With this I also combined this with a different model I had created to calculate stuff+ which looks only at the physical characteristics of a pitch. It is centered at 100 and each pitched is based on the most used fastball. Then I imported the new csv into tableau and used this to visualize my data. 
@@ -43,11 +50,13 @@
         </section>
     </main>
 
+    <!-- Footer with links -->
     <footer>
         <p><a href="https://github.com/zach340/DCDA40833-Portfolio">View Repository on GitHub</a></p>
         <p>&copy; 2026 Zach Campbell | DCDA 40833 | TCU</p>
     </footer>
 
+    <!-- Hamburger menu script -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');

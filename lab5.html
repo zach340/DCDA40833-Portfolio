@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Page metadata and styles -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navigation menu -->
     <nav>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span>
@@ -23,18 +25,25 @@
                     </ul>
     </nav>
 
+    <!-- Page header -->
     <header>
         <h1>Lab 5: Vibe coding</h1>
     </header>
+    
+    <!-- Main content -->
     <main>
+        <!-- Critique of AI coding experience -->
         <section>
             <h2>Critique</h2>
             <p> In this lab we were asked to us Ai to help us coded different things. I went with the python code generation route and had Some mixed success. I started by importing a csv in google colab and then had Googles Gemini come up with a bar graph showing how many instances of each college I had for pitching. this was a collaborative level code because i gave it the structure and what data set to use it just helped with some of the finer details and helped create a better image (example 1). Next it help me see how many lines of data was removed when i droped all nulls with dropna(). This was probalbly closer to level 1 because I wrote the code and it fixed my syntax errors. Next I wrote  code to find the average velocity and spin rate of all fastballs in the cleaned dataset but was having a hard tome on how to call some of the correct collumn names and so i had the Ai come in and help clean up my coded and replace any mistakes I had.I finally tried to do some level 3 or vibe coding, and it struggled. I asked it to scrape a couple of different websites because I did not know how to do this or what to look for so i told it what result i wanted and let it try to do this. It struggled and after a few attempts, I realized it was not the right tool for the job. If it got blocked by the website it would try to figure out a way to circumvent this and get to the data. This is bad becuase it means that the AI is willing to not follow the rules that were set in place by the company in order to complete its task. there needs to be a balance between coding and the Ai because if we just let the AI do all of it it may break the rules to do so if not supervised. Having a little coding back ground can go a long way into make sure yuou are using AI responably and ethically.   </p>
         </section>
+        
+        <!-- Link to Google Colab notebook -->
         <section>
             <h2>Notebook</h2>
             <p>Here is the link to my google colab notebook where I did all of my coding for this lab. <a href="https://colab.research.google.com/drive/16wBLwYZXfCMLqFPvynSu7FNXcT0eKUg1?usp=sharing">Google Colab Notebook</a></p>
 
+        <!-- Screenshot examples -->
         <section>
             <figure>
                 <img src="images\Screenshot 2026-02-24 003031.png" alt="this is example 1" width="80%">
@@ -69,11 +78,14 @@
         
         </section>
     </main>
-</body>
+    
+    <!-- Footer with links -->
     <footer>
         <p><a href="https://github.com/zach340/DCDA40833-Portfolio">View Repository on GitHub</a></p>
         <p>&copy; 2026 Zach Campbell | DCDA 40833 | TCU</p>
     </footer>
+    
+    <!-- Hamburger menu script -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
@@ -82,4 +94,5 @@
             navMenu.classList.toggle('active');
         });
     </script>
+</body>
 </html>
