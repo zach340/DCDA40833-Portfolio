@@ -39,12 +39,23 @@
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
+                    font-size: 16px;
+                }
+                
+                nav, nav a, nav ul, nav li {
+                    font-size: 1rem;
+                }
+                
+                @media (max-width: 768px) {
+                    nav, nav a, nav ul, nav li {
+                        font-size: 0.9rem;
+                    }
                 }
             </style>
 
             <style>#map {
                 position:absolute;
-                top:110px;
+                top:10px;
                 bottom:0;
                 right:0;
                 left:0;
@@ -55,8 +66,8 @@
                 #map_dce5fd515b7d13f30aedfec87535368c {
                     position: absolute;
                     width: 100%;
-                    height: calc(100% - 110px);
-                    top: 110px;
+                    height: calc(100% - 150px);
+                    top: 150px;
                     left: 0;
                 }
             </style>
@@ -87,31 +98,18 @@
                     box-shadow: 0 6px 8px rgba(0,0,0,0.4);
                 }
                 
-                .page-header {
-                    background-color: #4d1979;
-                    color: white;
-                    padding: 15px 20px;
-                    text-align: center;
-                    font-size: 24px;
-                    font-weight: bold;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-                    position: relative;
-                    z-index: 999;
-                }
-                
                 nav {
-                    position: sticky;
-                    z-index: 10001 !important;
+                    position: relative;
+                    z-index: 1001;
                 }
                 
                 nav ul {
-                    position: fixed;
-                    z-index: 10002 !important;
+                    z-index: 1002;
                 }
                 
                 .hamburger {
                     position: relative;
-                    z-index: 10003 !important;
+                    z-index: 1003;
                 }
             </style>
 
@@ -140,10 +138,10 @@
         </ul>
     </nav>
     
-    <!-- Page title header -->
-    <div class="page-header">
-        Lab 6: Hometown Map
-    </div>
+    <!-- Page header -->
+    <header>
+        <h1>Lab 6: Hometown Map</h1>
+    </header>
     
     <!-- Floating link to reflection PDF -->
     <a href="reflection_lab6.pdf" target="_blank" class="reflection-link">
